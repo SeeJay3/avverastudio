@@ -1,0 +1,25 @@
+---
+const items = [
+  'Gestão de Redes Sociais',
+  'Identidade Visual',
+  'Produção de Conteúdo',
+  'Diagnóstico Estratégico',
+  'Copywriting',
+  'Posicionamento de Marca',
+];
+
+// Duplicado para o loop sem costura via translateX(-50%)
+const loop = [...items, ...items];
+---
+
+<div class="strip">
+  <div class="strip-inner">
+    {
+      loop.map((item) => (
+        <span class="strip-item">
+          {item} <span class="strip-dot">·</span>
+        </span>
+      ))
+    }
+  </div>
+</div>

@@ -1,0 +1,37 @@
+---
+import { WHATSAPP_URL } from '~/config';
+
+const tickerItems = [
+  'Clínicas',
+  'Médicos Especialistas',
+  'Dentistas',
+  'Estéticas',
+  'Nutricionistas',
+];
+---
+
+<section class="hero" data-animate-hero>
+  <p class="hero-tag gsap-fade">Direção de comunicação para saúde & estética</p>
+  <h1 class="hero-headline gsap-fade">
+    Construímos a <em>presença estratégica</em> que transforma como o mercado enxerga você.
+  </h1>
+  <p class="hero-sub gsap-fade">
+    Não é sobre postar mais. É sobre posicionar certo — com estratégia, estética e intenção alinhadas
+    à sua expertise clínica.
+  </p>
+  <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" class="hero-cta gsap-fade">
+    <span class="hero-cta-text">Agendar reunião</span>
+    <span class="hero-cta-arrow">→</span>
+  </a>
+
+  <div class="hero-ticker gsap-fade">
+    {
+      tickerItems.map((item, i) => (
+        <>
+          <span>{item}</span>
+          {i < tickerItems.length - 1 && <div class="ticker-divider" />}
+        </>
+      ))
+    }
+  </div>
+</section>

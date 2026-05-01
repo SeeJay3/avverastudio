@@ -1,0 +1,31 @@
+---
+import { WHATSAPP_URL } from '~/config';
+
+const pains = [
+  'Conteúdo que atrai mas não converte o paciente certo',
+  'Falta de clareza sobre o que diferencia sua clínica',
+  'Estética visual que não comunica o nível do seu trabalho',
+  'Redes sociais gerenciadas por achismo, sem estratégia',
+  'Dependência de indicação — sem previsibilidade de novos pacientes',
+];
+---
+
+<div class="manifesto" id="manifesto">
+  <div class="manifesto-inner">
+    <p class="section-label gsap-fade">A virada</p>
+    <h2 class="manifesto-title gsap-fade">
+      Investir na Avvera não é sobre ter <em>mais posts</em>.
+    </h2>
+    <p class="manifesto-body gsap-fade">
+      É sobre parar de desperdiçar autoridade em conteúdo sem direção. É construir uma presença que
+      trabalha por você — mesmo quando você está dentro do consultório atendendo.
+    </p>
+    <ul class="manifesto-list gsap-fade">
+      {pains.map((pain) => <li>{pain}</li>)}
+    </ul>
+    <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" class="manifesto-cta gsap-fade">
+      <span class="manifesto-cta-text">Quero mudar isso agora</span>
+      <span class="manifesto-cta-arrow">→</span>
+    </a>
+  </div>
+</div>

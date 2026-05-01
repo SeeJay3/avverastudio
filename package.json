@@ -1,0 +1,30 @@
+{
+  "name": "avvera-studio",
+  "type": "module",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Avvera Studio — landing page de direção de comunicação para saúde e estética.",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "check": "astro check"
+  },
+  "dependencies": {
+    "@astrojs/react": "^4.2.1",
+    "@gsap/react": "^2.1.2",
+    "astro": "^5.1.0",
+    "gsap": "^3.13.0",
+    "ogl": "^1.0.11",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.4",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "typescript": "^5.7.2"
+  }
+}

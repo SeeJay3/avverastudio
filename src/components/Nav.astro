@@ -1,0 +1,31 @@
+---
+import { WHATSAPP_URL } from '~/config';
+
+const links = [
+  { href: '#servicos', label: 'Serviços' },
+  { href: '#portfolio', label: 'Portfólio' },
+  { href: '#sobre', label: 'Sobre' },
+  { href: '#contato', label: 'Contato' },
+];
+---
+
+<nav data-nav>
+  <a href="#" class="nav-logo" aria-label="Avvera Studio — início">
+    <img src="/images/Logo.png" alt="Avvera Studio" class="nav-logo-img" />
+  </a>
+
+  <ul class="nav-links">
+    {
+      links.map((link) => (
+        <li>
+          <a href={link.href}>{link.label}</a>
+        </li>
+      ))
+    }
+  </ul>
+
+  <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" class="nav-cta">
+    <span class="nav-cta-text">Agendar conversa</span>
+    <span class="nav-cta-arrow">→</span>
+  </a>
+</nav>

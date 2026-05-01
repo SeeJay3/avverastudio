@@ -1,0 +1,75 @@
+---
+import BaseLayout from '~/layouts/BaseLayout.astro';
+import Nav from '~/components/Nav.astro';
+import Hero from '~/components/Hero.astro';
+import HowWeHelp from '~/components/HowWeHelp.astro';
+import Services from '~/components/Services.astro';
+import Manifesto from '~/components/Manifesto.astro';
+import Portfolio from '~/components/Portfolio.astro';
+import About from '~/components/About.astro';
+import FinalCta from '~/components/FinalCta.astro';
+import Footer from '~/components/Footer.astro';
+---
+
+<BaseLayout>
+  <Nav />
+
+  <div class="panel" data-section="hero">
+    <div class="outer">
+      <div class="inner">
+        <div class="panel-content"><Hero /></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel" data-section="metodologia">
+    <div class="outer">
+      <div class="inner">
+        <div class="panel-content"><HowWeHelp /></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel" data-section="servicos">
+    <div class="outer">
+      <div class="inner">
+        <div class="panel-content"><Services /></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel" data-section="manifesto">
+    <div class="outer">
+      <div class="inner">
+        <div class="panel-content"><Manifesto /></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel" data-section="portfolio">
+    <div class="outer">
+      <div class="inner">
+        <div class="panel-content"><Portfolio /></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel" data-section="sobre">
+    <div class="outer">
+      <div class="inner">
+        <div class="panel-content"><About /></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel" data-section="contato">
+    <div class="outer">
+      <div class="inner">
+        <div class="panel-content panel-content--with-footer">
+          <div class="panel-main"><FinalCta /></div>
+          <Footer />
+        </div>
+      </div>
+    </div>
+  </div>
+</BaseLayout>

@@ -1,0 +1,71 @@
+---
+import SpotlightCard from '~/components/react/SpotlightCard';
+
+const services = [
+  {
+    title: 'Diagnóstico Estratégico',
+    body:
+      'Análise profunda do seu perfil, concorrência e oportunidades. Entregamos um plano de ação claro para sair do improviso.',
+    paths: [
+      'M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77',
+      'M9 19c-5 1.5-5-2.5-7-3',
+    ],
+  },
+  {
+    title: 'Sprint de Conteúdo',
+    body:
+      'Produção intensiva e estratégica de conteúdo para uma campanha específica ou lançamento de serviço.',
+    rect: { x: 3, y: 3, width: 18, height: 18, rx: 2 },
+    paths: ['M8 12h8M8 8h8M8 16h5'],
+  },
+  {
+    title: 'Gestão Estratégica de Redes',
+    body:
+      'Direção completa da comunicação digital — posicionamento, pauta, produção, publicação e análise de resultados.',
+    circle: { cx: 12, cy: 12, r: 10 },
+    paths: ['M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z'],
+  },
+  {
+    title: 'Identidade Visual',
+    body:
+      'Criação de uma estética sofisticada e coerente que posiciona sua clínica no nível de excelência que ela merece.',
+    paths: ['M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z'],
+  },
+  {
+    title: 'Consultoria de Posicionamento',
+    body:
+      'Sessão estratégica para definir voz, diferenciação e mensagem central da sua marca no mercado de saúde.',
+    paths: ['M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2'],
+    circle: { cx: 12, cy: 7, r: 4 },
+  },
+  {
+    title: 'Análise de Métricas',
+    body:
+      'Relatórios que transformam números em decisões. Acompanhamento mensal com foco em crescimento real.',
+    polyline: '22 12 18 12 15 21 9 3 6 12 2 12',
+  },
+];
+---
+
+<section class="services-bg" id="servicos">
+  <p class="section-label gsap-fade">Serviços</p>
+  <h2 class="section-title gsap-fade">Nosso portfólio <em>completo</em></h2>
+  <div class="services-grid">
+    {
+      services.map((s) => (
+        <SpotlightCard client:visible className="service-card gsap-fade">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24">
+              {s.rect && <rect {...s.rect} />}
+              {s.circle && <circle {...s.circle} />}
+              {s.polyline && <polyline points={s.polyline} />}
+              {s.paths?.map((d) => <path d={d} />)}
+            </svg>
+          </div>
+          <h3>{s.title}</h3>
+          <p>{s.body}</p>
+        </SpotlightCard>
+      ))
+    }
+  </div>
+</section>

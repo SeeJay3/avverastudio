@@ -1,0 +1,63 @@
+---
+import TickerStrip from '~/components/TickerStrip.astro';
+
+const steps = [
+  {
+    n: '01',
+    title: 'Diagnóstico de Posicionamento',
+    body:
+      'Mapeamos onde sua marca está hoje e onde ela precisa estar — identificando os gaps que estão custando autoridade e conversão.',
+  },
+  {
+    n: '02',
+    title: 'Estratégia Editorial',
+    body:
+      'Criamos uma linha de conteúdo que educa, atrai e converte o paciente certo — sem achismos, com método.',
+  },
+  {
+    n: '03',
+    title: 'Direção Visual & Estética',
+    body:
+      'Desenvolvemos uma identidade que comunica excelência antes mesmo de o paciente ler uma palavra.',
+  },
+  {
+    n: '04',
+    title: 'Gestão Estratégica de Redes',
+    body:
+      'Executamos o dia a dia com visão de longo prazo — cada post serve ao posicionamento, não só ao alcance imediato.',
+  },
+  {
+    n: '05',
+    title: 'Relatório & Tomada de Decisão',
+    body: 'Entregamos dados que fazem sentido para o negócio — não apenas métricas de vaidade.',
+  },
+];
+---
+
+<section id="metodologia">
+  <TickerStrip />
+  <div class="how-wrap">
+    <div class="how-left gsap-fade">
+      <p class="section-label">Como atuamos</p>
+      <h2 class="section-title">O que a <em>Avvera</em> faz por você?</h2>
+      <p class="how-intro">
+        Cada projeto começa com uma leitura profunda do seu negócio. Nenhuma estratégia é genérica —
+        tudo é construído a partir da sua especialidade, do seu público e do posicionamento que você
+        quer ocupar no mercado.
+      </p>
+    </div>
+    <ul class="how-list">
+      {
+        steps.map((step) => (
+          <li class="how-item gsap-fade">
+            <span class="how-num">{step.n}</span>
+            <div class="how-text">
+              <strong>{step.title}</strong>
+              <p>{step.body}</p>
+            </div>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</section>
